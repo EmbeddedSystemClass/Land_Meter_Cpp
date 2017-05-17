@@ -2,3 +2,5 @@
 Using Make file:
 
 http://www.network-theory.co.uk/docs/gccintro/gccintro_16.html
+
+https://github.com/chanakya-vc/PRU-I2C_SPI_master/wiki/SPI-Master-Controller
