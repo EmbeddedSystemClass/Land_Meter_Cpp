@@ -10,3 +10,4 @@ http://blacklib.yigityuce.com/
 MAX1300:
 https://github.com/embeddedtoys/Beagleboneblack/tree/master/bbbrobocape
 
+ AM335x 1GHz ARM® Cortex-A8
