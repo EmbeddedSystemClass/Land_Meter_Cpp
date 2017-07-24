@@ -1,0 +1,37 @@
+CAN programming resources
+
+
+http://zewaren.net/site/node/152
+
+https://github.com/digitalbond/canbus-beaglebone
+
+
+http://www.thomas-wedemeyer.de/beaglebone-canbus-python.html
+
+https://www.youtube.com/watch?v=pqwqNU--IbQ
+
+CAN Cape:
+http://www.towertech.it/en/products/hardware/tt3201-can-cape/
+
+
+
+
+CANOpen:
+
+https://github.com/CANopenNode/CANopenSocket
+
+https://e2e.ti.com/support/arm/sitara_arm/f/791/t/297888
+
+https://www.emtas.de/en/download/canopen
+
+http://basdebruijn.com/category/canopen/
+
+CAN Cape:
+http://www.waveshare.com/wiki/RS485_CAN_CAPE
+
+
+
+RS485:
+
+https://blog.savoirfairelinux.com/en-ca/2013/adding-rs-485-support-to-the-beaglebone-with-short-turnaround-delay/
+
