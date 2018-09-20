@@ -67,6 +67,68 @@ int callbackHeartBeat(int var){
 
 
 int main(){
+   
+   
+   
+   
+        string Meter                            =     "Land";
+        string Hardware_revision                =     "1.0";         
+        string Software_revision                =     "1.5";       
+        string Calibration_version              =     "calibrated";  
+        string Customer                         =     "Orangelamp";  
+    
+        int pwm_freq                            =     125;       
+        int sense_freq                          =     10000;     
+        float adc_offset                        =     0.0044678;   
+        float zh_offset                         =     0.0;         
+        float lid_thermistor_offset             =     0.0;         
+        float p12v_offset                       =     0.0;         
+        float p5v_offset                        =     0.0;         
+        float p3p3v_offset                      =     0.0;         
+        float battery_thermistor_offset         =     0.0;         
+        float batt_v_offset                     =     0.0;         
+        float beam_offset                       =     0.0;         
+        float m5v_offset                        =     0.0;         
+        float zp_offset                         =     0.0;         
+        float gearbox_thermistor_offset         =     0.0;         
+        float conning_tower_thermistor_offset   =     0.0;         
+        float arrestment_thermistor_offset      =     0.0;         
+        float meter_thermistor_1_offset         =     0.0;         
+        float meter_thermistor_2_offset         =     0.0;            
+        float adc_divider                       =     0.0044678;   
+        float zh_divider                        =     0.0;         
+        float lid_thermistor_divider            =     0.0;         
+        float p12v_divider                      =     0.0;         
+        float p5v_divider                       =     0.0;         
+        float p3p3v_divider                     =     0.0;         
+        float battery_thermistor_divider        =     0.0;         
+        float batt_v_divider                    =     0.0;         
+        float beam_divider                      =     0.0;         
+        float m5v_divider                       =     0.0;         
+        float zp_divider                        =     0.0;         
+        float gearbox_thermistor_divider        =     0.0;         
+        float conning_tower_thermistor_divider  =     0.0;         
+        float arrestment_thermistor_divider     =     0.0;         
+        float meter_thermistor_1_divider        =     0.0;         
+        float meter_thermistor_2_divider        =     0.0;         
+        float beam10                            =     0.0;         
+        float beam50                            =     2.5;         
+        float beam90                            =     5.0;         
+        float p5vTarget                         =     5.0;        
+        float p5vError                          =     0.2;        
+        float p3p3vTarget                       =     3.3;        
+        float p3p3vError                        =     0.2;        
+        float p12vTarget                        =     12.0;       
+        float p12vError                         =     0.2;        
+        float batteryTarget                     =     12.0;       
+        float batteryError                      =     2.0;        
+        float zh_Target                         =     36.0;       
+        float zh_Error                          =     0.5;        
+        float zpTarget                          =     24.0;       
+        float zpError                           =     0.01;           
+   
+   
+   
 // Setup GPIO etc.  
 // OUTPUTS   
    // GPIO outGPIO(37);//, inGPIO(115), 
