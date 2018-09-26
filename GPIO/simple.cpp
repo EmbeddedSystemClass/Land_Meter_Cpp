@@ -12,6 +12,7 @@ using namespace std;
 
 int main(){
    GPIO outGPIO(49), inGPIO(115);
+   cout << "Setting GPIO 49 to out and GPIO 115 to in" << endl;
 
    // Basic Output - Flash the LED 10 times, once per second
    outGPIO.setDirection(OUTPUT);

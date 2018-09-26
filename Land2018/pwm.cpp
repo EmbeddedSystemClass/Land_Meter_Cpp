@@ -20,26 +20,48 @@
  * the grant of any rights to this Software.
  * 
  * For more details, see http://www.derekmolloy.ie/
+ 
+EHRPWM0A	P9_22, P9_31
+EHRPWM0B	P9_21, P9_29
+EHRPWM1A	P9_14, P8_36
+EHRPWM1B	P9_16, P8_34
+EHRPWM2A	P8_19, P8_45
+EHRPWM2B	P8_13, P8_46
+ 
+ECAPPWM0	P9_42			pwm-0:0 
+ 
+ 
+ pwmchip3/pwm-3:0
+ pwmchip = 3;
+ pwmab = 0;
+ 
+ this -> path = PWM_PATH + "pwmchip" + pwmchip + "/";
+ 
  */
-#include <iostream>
+
 #include "PWM.h"
 #include "util.h"
 #include <cstdlib>
-
+#include <iostream>
 using namespace std;
-using namespace exploringBB;
+using namespace exploringBB; 
 
-PWM::PWM(string pinName) {
-	this->name = pinName;
-	this->path = PWM_PATH + this->name + "/";
+PWM::PWM(string pwmchip, string pwmab ) {
+	// this->name = pinName;
+	this->name = "pwmchip" + pwmchip;
+	// this->path = PWM_PATH + this->name + "/";
+	this->path = PWM_PATH + this->name + "/";//+ pwmchip + "/";
+	
 	this->analogFrequency = 100000;
 	this->analogMax = 3.3;
-	cout << "Path = " << path << endl;
+	write(this->path, "export", pwmab);
+	this->path = PWM_PATH + this->name + "/"+ "pwm-" + pwmchip + ":" + pwm"/";
+	cout << path << endl;
+	
 }
 
 int PWM::setPeriod(unsigned int period_ns){
-	cout << "Setting period" << endl;
-	cout << this->path << PWM_PERIOD << endl;
+	cout << path << PWM_PERIOD << endl;
 	return write(this->path, PWM_PERIOD, period_ns);
 }
 
@@ -66,6 +88,7 @@ float PWM::getFrequency(){
 }
 
 int PWM::setDutyCycle(unsigned int duty_ns){
+	cout << path << PWM_DUTY << endl;
 	return write(this->path, PWM_DUTY, duty_ns);
 }
 

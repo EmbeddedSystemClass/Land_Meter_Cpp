@@ -59,16 +59,16 @@ GPIO::GPIO(int number) {
 	this->exportGPIO();
 	// need to give Linux time to set up the sysfs structure
 	usleep(250000); // 250ms delay
-	cout << "GPIO path set to " << this->path << endl;
+	cout << "GPIO "<< number << " set to path: " << path << endl;
 }
 
 int GPIO::write(string path, string filename, string value){
    ofstream fs;
+   cout << path << filename << value << endl;
    fs.open((path + filename).c_str());
-   
    if (!fs.is_open()){
 	   perror("GPIO: write failed to open file ");
-	   cout << path + filename + value << endl;
+	   cout << path << filename << " " << value << endl;
 	   return -1;
    }
    fs << value;
@@ -89,6 +89,7 @@ string GPIO::read(string path, string filename){
 }
 
 int GPIO::write(string path, string filename, int value){
+   cout << path << filename << value << endl;
    stringstream s;
    s << value;
    return this->write(path,filename,s.str());
@@ -104,6 +105,7 @@ int GPIO::unexportGPIO(){
 
 int GPIO::setDirection(GPIO_DIRECTION dir){
    switch(dir){
+   	cout << "Setting " << path << "to "  << dir << endl;
    case INPUT: return this->write(this->path, "direction", "in");
       break;
    case OUTPUT:return this->write(this->path, "direction", "out");
@@ -113,6 +115,7 @@ int GPIO::setDirection(GPIO_DIRECTION dir){
 }
 
 int GPIO::setValue(GPIO_VALUE value){
+   cout << path << value << endl;	
    switch(value){
    case HIGH: return this->write(this->path, "value", "1");
       break;
